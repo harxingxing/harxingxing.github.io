@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>git常见问题汇总 | 心光博客</title>
+  <meta name="keywords" content=" git , github ">
+  <meta name="description" content="git常见问题汇总 | 心光博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="123456var stu_info &#x3D; &amp;#123;name: &#39;张三&#39;&amp;#125;;&#x2F;&#x2F;向现有数组中添加一个元素stu_info.age &#x3D; 13;&#x2F;&#x2F;再向现有数组中添加一个json元素stu_info.classes.name &#x3D; &#39;文科一班&#39;; &#x2F;&#x2F;错误的写法stu_info.classes &#x3D; &amp;#123;name: &#39;文科一班&#39;&amp;#125;; &#x2F;&#x2F;正确的写法    参考： https:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="向json中添加元素">
+<meta property="og:url" content="http://blog.bbcc.ink/2020/07/01/%E5%90%91json%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0/index.html">
+<meta property="og:site_name" content="心光博客">
+<meta property="og:description" content="123456var stu_info &#x3D; &amp;#123;name: &#39;张三&#39;&amp;#125;;&#x2F;&#x2F;向现有数组中添加一个元素stu_info.age &#x3D; 13;&#x2F;&#x2F;再向现有数组中添加一个json元素stu_info.classes.name &#x3D; &#39;文科一班&#39;; &#x2F;&#x2F;错误的写法stu_info.classes &#x3D; &amp;#123;name: &#39;文科一班&#39;&amp;#125;; &#x2F;&#x2F;正确的写法    参考： https:">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-01T08:15:24.000Z">
+<meta property="article:modified_time" content="2020-07-01T08:39:09.536Z">
+<meta property="article:author" content="心光">
+<meta property="article:tag" content="js">
+<meta property="article:tag" content="json">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/harxingxing/cdn-assets/avatar/avatar.png">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+</div>
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="https://cdn.jsdelivr.net/gh/harxingxing/cdn-assets/avatar/avatar.png" />
+</a>
+<div class="author">
+    <span>心光</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="All">All<small>(5)</small></div></li>
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="技术分享"><i class="fold iconfont icon-right"></i>技术分享<small>(5)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="技术分享<--->git">git<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="技术分享<--->js">js<small>(1)</small></div>
+                            
+                        </li>
+                            
+                        <li><div data-rel="技术分享<--->php">php<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="5">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>git</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>github</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>hexo</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>js</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>json</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>php</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>thinkphp</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>常用</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日期</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <div id="local-search-result">
+
+    </div>
+    
+    <nav id="title-list-nav">
+        
+        <a  class="All 技术分享 js "
+           href="/2020/07/01/%E5%90%91json%E4%B8%AD%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0/"
+           data-tag="js,json"
+           data-author="" >
+            <span class="post-title" title="向json中添加元素">向json中添加元素</span>
+            <span class="post-date" title="2020-07-01 16:15:24">2020/07/01</span>
+        </a>
+        
+        <a  class="All 技术分享 "
+           href="/2020/06/23/thinkphp%E4%B8%ADwhere%E4%B8%8EwhereOr%E6%B7%B7%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/"
+           data-tag="php,thinkphp"
+           data-author="" >
+            <span class="post-title" title="thinkphp中where与whereOr混写的问题">thinkphp中where与whereOr混写的问题</span>
+            <span class="post-date" title="2020-06-23 14:37:36">2020/06/23</span>
+        </a>
+        
+        <a  class="All 技术分享 php "
+           href="/2020/06/23/php%E8%8E%B7%E5%8F%96%E6%9C%AC%E5%91%A8%E3%80%81%E6%9C%AC%E6%9C%88%E3%80%81%E6%9C%AC%E5%AD%A3%E5%BA%A6%E3%80%81%E5%8D%8A%E5%B9%B4%E3%80%81%E4%BB%8A%E5%B9%B4%E7%AD%89%E5%B8%B8%E7%94%A8%E6%97%A5%E6%9C%9F/"
+           data-tag="日期,php"
+           data-author="" >
+            <span class="post-title" title="php获取本周、本月、本季度、半年、今年等常用日期">php获取本周、本月、本季度、半年、今年等常用日期</span>
+            <span class="post-date" title="2020-06-23 14:19:46">2020/06/23</span>
+        </a>
+        
+        <a  class="All 技术分享 git "
+           href="/2020/06/23/git%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"
+           data-tag="git,github"
+           data-author="" >
+            <span class="post-title" title="git常见问题汇总">git常见问题汇总</span>
+            <span class="post-date" title="2020-06-23 11:12:54">2020/06/23</span>
+        </a>
+        
+        <a  class="All 技术分享 "
+           href="/2020/06/22/hexo%E6%97%A5%E5%B8%B8%E6%93%8D%E4%BD%9C/"
+           data-tag="hexo,常用"
+           data-author="" >
+            <span class="post-title" title="hexo日常操作">hexo日常操作</span>
+            <span class="post-date" title="2020-06-22 08:33:11">2020/06/22</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-git常见问题汇总" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">git常见问题汇总</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="技术分享">技术分享</a> > 
+            
+            <a  data-rel="技术分享&lt;---&gt;git">git</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color4">git</a>
+            
+            <a class="color2">github</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2020-06-23 14:50:42'>2020-06-23 11:12</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#生成秘钥文件"><span class="toc-text">生成秘钥文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#github添加秘钥提示“-Key-is-already-in-use-”-即：key已经被占用"><span class="toc-text">github添加秘钥提示“ Key is already in use ”( 即：key已经被占用 )</span></a></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="生成秘钥文件"><a href="#生成秘钥文件" class="headerlink" title="生成秘钥文件"></a>生成秘钥文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 命令行输入如下命令，然后根据提示操作，username为你git上的用户名</span></span><br><span class="line"><span class="comment"># window管理员用户默认生成的文件路径为 C:\Users\Administrator\.ssh</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"username"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="github添加秘钥提示“-Key-is-already-in-use-”-即：key已经被占用"><a href="#github添加秘钥提示“-Key-is-already-in-use-”-即：key已经被占用" class="headerlink" title="github添加秘钥提示“ Key is already in use ”( 即：key已经被占用 )"></a>github添加秘钥提示“ Key is already in use ”( 即：key<strong>已经被占用</strong> )</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可使用如下命令来查找哪个地方使用了该键</span></span><br><span class="line">ssh -T -ai ~/.ssh/id_rsa git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>github有两处添加秘钥的地方,这两个地方key值不能相同</p>
+<ol>
+<li>Settings -&gt; SSH and GPG keys -&gt; New SSH key</li>
+<li>某一仓库 -&gt; Settings -&gt; Secrets -&gt; New secret</li>
+</ol>
+<blockquote>
+<p>参考： <a href="https://blog.csdn.net/m0_38072683/article/details/82939535" target="_blank" rel="noopener">https://blog.csdn.net/m0_38072683/article/details/82939535</a> </p>
+</blockquote>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 harxingxing@163.com </span>
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2020
+</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 552px;
+    }
+    .nav.fullscreen {
+        margin-left: -552px;
+    }
+    .nav-left {
+        width: 130px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 512px;
+        }
+        .nav.fullscreen {
+            margin-left: -512px;
+        }
+        .nav-left {
+            width: 120px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 512px;
+            margin-left: -512px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
