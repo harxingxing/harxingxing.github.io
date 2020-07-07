@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>使用layui查询列表分页不能重置问题</title>
+      <link href="/2020/07/07/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-2020-07-07-%E4%BD%BF%E7%94%A8layui%E6%9F%A5%E8%AF%A2%E5%88%97%E8%A1%A8%E5%88%86%E9%A1%B5%E4%B8%8D%E8%83%BD%E9%87%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+      <url>/2020/07/07/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-2020-07-07-%E4%BD%BF%E7%94%A8layui%E6%9F%A5%E8%AF%A2%E5%88%97%E8%A1%A8%E5%88%86%E9%A1%B5%E4%B8%8D%E8%83%BD%E9%87%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p> 我发现自己的表格在使用搜索按钮后,无法定位到搜索当前数据的第一页,这里可以使用监听搜索在执行重载中,将当前页curr重置为1即可</p><p> <img src="../images/20200102144702934.png" alt=""> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> layui </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo项目迁移新机操作流程</title>
       <link href="/2020/07/04/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-2020-07-04-hexo%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E6%96%B0%E6%9C%BA%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/"/>
       <url>/2020/07/04/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-2020-07-04-hexo%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E6%96%B0%E6%9C%BA%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B/</url>
@@ -33,7 +58,7 @@
       <link href="/2020/07/02/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-2020-07-02-%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages/"/>
       <url>/2020/07/02/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB-2020-07-02-%E5%B0%86-Hexo-%E9%83%A8%E7%BD%B2%E5%88%B0-GitHub-Pages/</url>
       
-        <content type="html"><![CDATA[<ol><li><a href="https://github.com/" target="_blank" rel="noopener">github</a>上新建公开的仓库名： &lt;你的 GitHub 用户名&gt;.github.io </li><li>本地生成静态文件</li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="将-Hexo-部署到-GitHub-Pages"><a href="#将-Hexo-部署到-GitHub-Pages" class="headerlink" title="将 Hexo 部署到 GitHub Pages"></a>将 Hexo 部署到 GitHub Pages</h3><ol><li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a>上新建公开的仓库名： &lt;你的 GitHub 用户名&gt;.github.io </p></li><li><p>本地项目根目录执行以下命令生成包含静态资源的public文件夹</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></li><li><p>将public文件夹中的内容推送到刚建的仓库中</p></li><li><p>然后使用你的 &lt;你的 GitHub 用户名&gt;.github.io 即可访问</p><h3 id="配置自己的域名"><a href="#配置自己的域名" class="headerlink" title="配置自己的域名"></a>配置自己的域名</h3><ol><li>解析一个二级域名，可采用A记录或者CNAME记录，A记录就是将二级域名指向github上的ip，我使用的是CNAME</li><li>将自己的二级域名指向 &lt;你的 GitHub 用户名&gt;.github.io</li><li>创建文件hexo/source/CNAME，内容为你的域名</li><li>生成发布即可</li></ol></li></ol><blockquote><p>参考地址： <a href="https://hexo.io/zh-cn/docs/github-pages" target="_blank" rel="noopener">将 Hexo 部署到 GitHub Pages</a> </p><p><a href="https://www.jianshu.com/p/e70b4ca63115" target="_blank" rel="noopener">配置自己的域名</a></p><p><a href="https://blog.csdn.net/weixin_33910385/article/details/91888738" target="_blank" rel="noopener">Travis 持续集成自动发布博客文章</a></p></blockquote>]]></content>
       
       
       <categories>

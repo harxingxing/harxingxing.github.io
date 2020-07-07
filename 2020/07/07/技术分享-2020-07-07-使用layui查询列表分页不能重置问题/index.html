@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>将 Hexo 部署到 GitHub Pages | 心光博客</title>
-  <meta name="keywords" content=" hexo , GitHub Pages ">
-  <meta name="description" content="将 Hexo 部署到 GitHub Pages | 心光博客">
+  <title>使用layui查询列表分页不能重置问题 | 心光博客</title>
+  <meta name="keywords" content=" layui ">
+  <meta name="description" content="使用layui查询列表分页不能重置问题 | 心光博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="在github上添加本机秘钥 安装 Git （如已安装请忽略） 找到项目克隆  1git clone git@github.com:名称&#x2F;项目名.git   安装 Node.js (Node.js 版本需不低于 8.10，建议使用 Node.js 10.0 及以上版本) （如已安装请忽略）  全局安装hexo 12# 可前往 C:\Users\Administrator\AppData\Roam">
 <meta property="og:type" content="article">
@@ -299,9 +299,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-技术分享-2020-07-02-将-Hexo-部署到-GitHub-Pages" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-技术分享-2020-07-07-使用layui查询列表分页不能重置问题" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">将 Hexo 部署到 GitHub Pages</h1>
+        <h1 class="article-title">使用layui查询列表分页不能重置问题</h1>
     
     <div class="article-meta">
         
@@ -319,16 +319,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">hexo</a>
-            
-            <a class="color3">GitHub Pages</a>
+            <a class="color1">layui</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            Created At : <time class="date" title='Updated At: 2020-07-07 14:04:38'>2020-07-02 09:27</time>
+            Created At : <time class="date" title='Updated At: 2020-07-07 14:21:57'>2020-07-07 14:11</time>
         
     </div>
     <div class="article-meta">
@@ -350,7 +348,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#将-Hexo-部署到-GitHub-Pages"><span class="toc-text">将 Hexo 部署到 GitHub Pages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置自己的域名"><span class="toc-text">配置自己的域名</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -366,28 +364,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="将-Hexo-部署到-GitHub-Pages"><a href="#将-Hexo-部署到-GitHub-Pages" class="headerlink" title="将 Hexo 部署到 GitHub Pages"></a>将 Hexo 部署到 GitHub Pages</h3><ol>
-<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a>上新建公开的仓库名： &lt;你的 GitHub 用户名&gt;.github.io </p>
-</li>
-<li><p>本地项目根目录执行以下命令生成包含静态资源的public文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>将public文件夹中的内容推送到刚建的仓库中</p>
-</li>
-<li><p>然后使用你的 &lt;你的 GitHub 用户名&gt;.github.io 即可访问</p>
-<h3 id="配置自己的域名"><a href="#配置自己的域名" class="headerlink" title="配置自己的域名"></a>配置自己的域名</h3><ol>
-<li>解析一个二级域名，可采用A记录或者CNAME记录，A记录就是将二级域名指向github上的ip，我使用的是CNAME</li>
-<li>将自己的二级域名指向 &lt;你的 GitHub 用户名&gt;.github.io</li>
-<li>创建文件hexo/source/CNAME，内容为你的域名</li>
-<li>生成发布即可</li>
-</ol>
-</li>
-</ol>
-<blockquote>
-<p>参考地址： <a href="https://hexo.io/zh-cn/docs/github-pages" target="_blank" rel="noopener">将 Hexo 部署到 GitHub Pages</a> </p>
-<p><a href="https://www.jianshu.com/p/e70b4ca63115" target="_blank" rel="noopener">配置自己的域名</a></p>
-<p><a href="https://blog.csdn.net/weixin_33910385/article/details/91888738" target="_blank" rel="noopener">Travis 持续集成自动发布博客文章</a></p>
-</blockquote>
+        <p> 我发现自己的表格在使用搜索按钮后,无法定位到搜索当前数据的第一页,这里可以使用监听搜索在执行重载中,将当前页curr重置为1即可</p>
+<p> <img src="../images/20200102144702934.png" alt=""> </p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 harxingxing@163.com </span>
